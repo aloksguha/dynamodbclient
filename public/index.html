@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/controllers/homeController.js"></script>
+    <script src="app/directives/tableListDirective.js"></script>
+    <script src="app/directives/tableContentDirective.js"></script>
+    <link rel="stylesheet" href="lib/bootstrap4/css/bootstrap.css"/>
+    <link rel="stylesheet" href="stylesheets/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="lib/bootstrap4/js/bootstrap.min.js"></script>
+    <style>.active { color: red; font-weight: bold; }</style>
+  </head>
+
+
+
+  <body>
+      <div ng-app="app">
+          <header ng-include="'app/templates/nav.html'"></header>
+          <div ui-view></div>
+      </div>
+  </body>
+</html>

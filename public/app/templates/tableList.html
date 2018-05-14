@@ -1,0 +1,42 @@
+<div class="row">
+        <div class="col-2"  style="overflow:scroll;">
+                        <nav class="nav">
+                                        <a class="nav-link active" href="#">refresh</a>
+                                        <!-- <a class="nav-link" href="#">Link</a>
+                                        <a class="nav-link" href="#">Link</a>
+                                        <a class="nav-link disabled" href="#">Disabled</a> -->
+                                      </nav>
+                        
+                <ul class="list-group list-group-flush">
+                        <li class="list-group-item" ng-repeat="tableName in tableListTree" ng-click="onSelectTable(tableName)" id="tableList{{tableName}}"
+                                style="cursor: context-menu;">
+                                {{tableName}}
+                        </li>
+                </ul>
+        </div>
+        <div class="col-10" style="overflow:scroll;">
+                        <nav class="nav" ng-show="isTableContent">
+                                        <a class="nav-link active" href="#">refresh</a>
+                                        <!-- <a class="nav-link" href="#">Link</a>
+                                        <a class="nav-link" href="#">Link</a>
+                                        <a class="nav-link disabled" href="#">Disabled</a> -->
+                                      </nav>
+                                     
+                <table class="table table-striped" ng-show="isTableContent">
+                        
+                        <thead>
+                                <tr>
+                                        <th scope="col" ng-repeat="colkey in colKeys">{{colkey}}</th>    
+                                </tr>
+                        </thead>
+                        <tbody>
+                                <tr ng-repeat="rowData in tableContent">
+                                        <td ng-repeat="colk in colKeys">
+                                                {{rowData[colk]}}
+                                        </td>
+                                </tr>
+                        </tbody>
+                </table>
+                <h3 ng-show="!isTableContent">No data found !!</h3>
+        </div>
+</div>
